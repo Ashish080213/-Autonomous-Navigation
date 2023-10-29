@@ -1,0 +1,3 @@
+<launch>
+    <node name="automatic_map_saver" pkg="my_turtlebot_mapping" type="automatic_mapping.py" output="screen" />
+</launch>

@@ -1,0 +1,9 @@
+shutdown_costmaps: false
+controller_frequency: 10.0 
+planner_patience: 5.0 # planner is willing to spend finding a feasible path for the robot
+controller_patience: 15.0 # controller is willing to spend trying to achieve a desired motion before it triggers a recovery behavior
+conservative_reset_dist: 3.0 
+planner_frequency: 5.0 # planner evaluates and updates the robot's planned trajectory
+oscillation_timeout: 10.0
+oscillation_distance: 0.2
+recovery_behaviour_enabled: true

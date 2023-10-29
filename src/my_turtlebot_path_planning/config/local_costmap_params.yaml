@@ -1,0 +1,53 @@
+# local_costmap:
+#   global_frame: odom
+#   robot_base_frame: base_footprint
+#   # track_unknown_space: true
+
+#   static_map: false  
+#   rolling_window: true
+#   width: 3
+#   height: 3
+#   resolution: 0.05
+#   publish_frequency: 10.0
+#   update_frequency: 10.0
+
+#   plugins:
+#     - {name: obstacles_laser,           type: "costmap_2d::ObstacleLayer"}
+#     - {name: inflation,                 type: "costmap_2d::InflationLayer"}
+
+
+
+local_costmap:
+  global_frame: odom
+  robot_base_frame: base_footprint
+  # track_unknown_space: true
+
+  publish_frequency: 20.0
+  update_frequency: 20.0 # frequency in Hz for the map to be updated
+  transform_tolerance: 0.5
+
+  static_map: false  
+  rolling_window: true
+  width: 3
+  height: 3
+  resolution: 0.05 
+
+  footprint_padding: 0.00
+
+  obstacles_layer:
+      observation_sources: laser
+      laser: {sensor_frame: base_scan, data_type: LaserScan, clearing: true, marking: true, topic: scan, inf_is_valid: true, obstacle_range: 5.5}
+
+  inflation:
+      inflation_radius: 0.5
+
+  plugins:
+    - {name: obstacles_laser,           type: "costmap_2d::ObstacleLayer"}
+    - {name: inflation,                 type: "costmap_2d::InflationLayer"}
+
+
+
+
+
+
+

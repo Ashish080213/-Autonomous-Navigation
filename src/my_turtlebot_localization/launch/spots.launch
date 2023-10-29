@@ -1,0 +1,3 @@
+<launch>
+    <node name="spot_recorder" pkg="my_turtlebot_localization" type="spots_to_file.py" output="screen" />
+</launch>

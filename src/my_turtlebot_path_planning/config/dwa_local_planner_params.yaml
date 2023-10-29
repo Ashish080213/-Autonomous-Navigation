@@ -1,0 +1,165 @@
+# DWAPlannerROS:
+
+# # Robot Configuration Parameters
+#   max_vel_x: 0.19
+#   min_vel_x: 0.05
+
+#   max_vel_y: 0.0
+#   min_vel_y: 0.0
+
+# # The velocity when robot is moving in a straight line
+#   max_vel_trans:  0.22
+#   min_vel_trans:  0.11
+
+#   max_vel_theta: 2.75
+#   min_vel_theta: 1.37
+
+#   acc_lim_x: 2.5
+#   acc_lim_y: 0.0
+#   acc_lim_theta: 3.2 
+
+# # Goal Tolerance Parameters
+#   xy_goal_tolerance: 0.05 #
+#   yaw_goal_tolerance: 0.17
+#   latch_xy_goal_tolerance: false
+
+# # Forward Simulation Parameters
+#   sim_time: 1.5
+#   vx_samples: 20
+#   vy_samples: 0
+#   vth_samples: 40
+#   controller_frequency: 10.0
+
+# # Trajectory Scoring Parameters
+#   path_distance_bias: 32.0
+#   goal_distance_bias: 20.0
+#   occdist_scale: 0.02
+#   forward_point_distance: 0.325
+#   stop_time_buffer: 0.2
+#   scaling_speed: 0.25
+#   max_scaling_factor: 0.2
+
+# # Oscillation Prevention Parameters
+#   oscillation_reset_dist: 0.05
+
+# # Debugging
+#   publish_traj_pc : true
+#   publish_cost_grid_pc: true
+
+
+# --------------------------------------------------------------
+
+
+DWAPlannerROS:
+
+  max_vel_x: 0.22  # maximum x velocity for the robot in m/s
+  min_vel_x: -0.12 # minimum x velocity for the robot in m/s, negative for backwards motion
+
+  max_vel_y: 0.0
+  min_vel_y: 0.0
+
+# The velocity when robot is moving in a straight line
+  max_vel_trans:  0.22 # maximum translational velocity for the robot in m/s
+  min_vel_trans:  -0.11 # minimum translational velocity for the robot in m/s
+
+  max_vel_theta: 2.75 # maximum rotational velocity for the robot in rad/s
+  min_vel_theta: 1.37 # minimum rotational velocity for the robot in rad/s
+
+  acc_lim_x: 2.5 # x acceleration limit of the robot
+  acc_lim_y: 0.0
+  acc_lim_theta: 3.2 # rotational acceleration limit of the robot
+
+
+# Goal Tolerance Parameters
+  xy_goal_tolerance: 0.1 # tolerance for the controller in the x and y distance when achieving a goal
+  yaw_goal_tolerance: 0.27 # tolerance for the controller in yaw/rotation when achieving its goal
+  latch_xy_goal_tolerance: false # beneficial in scenarios where approximate positioning is acceptable, or when the robot's primary goal is to align with a specific orientation
+
+# Forward Simulation Parameters
+  sim_time: 1.5 # time to forward-simulate trajectories 
+  vx_samples: 20 # number of samples to use when exploring the x velocity
+  vy_samples: 0
+  vth_samples: 40 # number of samples to use when exploring the theta velocity
+  controller_frequency: 10.0
+
+# Trajectory Scoring Parameters
+  path_distance_bias: 32.0 # how much the controller should stay close to the path
+  goal_distance_bias: 20.0 # how much the controller should attempt to reach its local goal
+  occdist_scale: 0.02 # how much the controller should attempt to avoid obstacles
+  forward_point_distance: 0.325
+  stop_time_buffer: 0.2 
+  scaling_speed: 0.25
+  max_scaling_factor: 0.2
+
+# Oscillation Prevention Parameters
+  oscillation_reset_dist: 0.05
+
+# Debugging
+  publish_traj_pc : true
+  publish_cost_grid_pc: true
+
+
+
+
+
+
+# ------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+# DWAPlannerROS:
+
+# # Robot Configuration Parameters
+#   max_vel_x: 0.1
+#   min_vel_x: -0.1
+
+#   max_vel_y: 0.0
+#   min_vel_y: 0.0
+
+# # The velocity when robot is moving in a straight line
+#   max_vel_trans:  0.1
+#   min_vel_trans:  0.05
+
+#   max_vel_theta: 1.75
+#   min_vel_theta: 0.37
+
+#   acc_lim_x: 1.5
+#   acc_lim_y: 0.0
+#   acc_lim_theta: 2.2 
+
+# # Goal Tolerance Parameters
+#   xy_goal_tolerance: 0.05
+#   yaw_goal_tolerance: 0.17
+#   latch_xy_goal_tolerance: false
+
+# # Forward Simulation Parameters
+#   sim_time: 1.5
+#   vx_samples: 20
+#   vy_samples: 0
+#   vth_samples: 40
+#   controller_frequency: 10.0
+
+# # Trajectory Scoring Parameters
+#   path_distance_bias: 32.0
+#   goal_distance_bias: 20.0
+#   occdist_scale: 0.02
+#   forward_point_distance: 0.325
+#   stop_time_buffer: 0.2
+#   scaling_speed: 0.25
+#   max_scaling_factor: 0.2
+
+# # Oscillation Prevention Parameters
+#   oscillation_reset_dist: 0.05
+
+# # Debugging
+#   publish_traj_pc : true
+#   publish_cost_grid_pc: true

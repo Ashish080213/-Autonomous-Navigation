@@ -1,0 +1,5 @@
+<launch>
+    <rosparam command="load" file="/home/user/catkin_ws/src/my_turtlebot_localization/text/spots.yaml"/>
+    <!-- <include file="$(find my_turtlebot_path_planning)/launch/move_base.launch" /> -->
+    <node name="get_coordinates_service_node" pkg="my_turtlebot_navigation" type="get_coordinates_service_server.py" output="screen"/>
+</launch>
